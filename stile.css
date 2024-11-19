@@ -1,0 +1,480 @@
+
+body { 
+    background-color: black;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 60px; 
+    flex-wrap: wrap;
+}
+
+header .brand {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%; /* Immagine riempie tutto lo schermo */
+    object-fit: cover; /* Assicura che l'immagine si adatti senza deformarsi */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay semi-trasparente nero */
+    z-index: 0; /* L'overlay si trova sotto il testo */
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    z-index: 1; /* Il testo deve essere sopra l'overlay */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Responsive - Media Queries */
+
+/* Su schermi più grandi (PC, tablet) */
+@media (max-width: 1024px) {
+    .hero {
+        height: 350px; /* Ridurre l'altezza dell'hero su dispositivi medi */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Ridurre la dimensione del testo */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Ridurre la dimensione del testo */
+    }
+}
+
+/* Su dispositivi mobile (max 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px; /* Ridurre l'altezza dell'hero su dispositivi più piccoli */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Testo più piccolo */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Testo più piccolo */
+    }
+
+    /* Ridurre la distanza dal bordo dello schermo */
+    .hero-text {
+        padding: 10px;
+    }
+}
+
+/* Su schermi extra piccoli (cellulare in modalità portrait) */
+@media (max-width: 480px) {
+    .hero {
+        height: 250px; /* Ancora più piccolo per dispositivi molto piccoli */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Font ancora più piccolo */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Font ancora più piccolo */
+    }
+
+    /* Ridurre il padding */
+    .hero-text {
+        padding: 5px;
+    }
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.card {
+    width: 250px; 
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin: 20px 0 10px;
+    color: #F2970F;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 30px; 
+        text-align: left;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: 220px; 
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 200px; 
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .text-image-section {
+        flex-direction: row;
+        text-align: left;
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .card {
+        width: 150px; 
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .text-image-section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer a {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Sezione del testo con immagini affiancate */
+.text-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+/* Per PC e tablet più grandi */
+@media (min-width: 1024px) {
+    .text-image-section {
+        margin-left: 100px; /* Sposta la sezione verso destra su dispositivi più grandi */
+    }
+
+    .text {
+        width: 50%; /* Mantieni una larghezza di metà per il testo */
+        text-align: left; /* Il testo sarà allineato a sinistra */
+       
+    }
+
+    .text h2 {
+        width: 50%; /* Mantieni una larghezza di metà per il testo */
+        text-align: left; /* Il testo sarà allineato a sinistra */
+        color: #F2970F;
+       
+    }
+
+  
+}
+
+/* Per tablet e schermi più piccoli */
+@media (max-width: 1024px) {
+    .text-image-section {
+        margin-left: 0; /* Rimuovi il margine sinistro per tablet e schermi più piccoli */
+        margin-right: 0; /* Rimuovi anche il margine destro */
+    }
+
+    .text {
+        width: 100%; /* Il testo occuperà l'intera larghezza disponibile */
+        text-align: center; /* Allinea il testo al centro su dispositivi più piccoli */
+    }
+
+  
+}
+
+/* Per dispositivi molto piccoli, come cellulari in modalità portrait */
+@media (max-width: 480px) {
+    .text-image-section {
+        margin-left: 0; /* Elimina il margine sinistro per una visibilità totale su dispositivi mobili */
+    }
+
+    .text {
+        width: 100%; /* Il testo continua a occupare tutta la larghezza */
+        text-align: left; /* Allinea il testo a sinistra su dispositivi molto piccoli */
+    }
+
+}
+
+/* Footer generico */
+footer {
+    background-color: #F2970F;
+    font-size: 1.25rem;
+    padding: 20px 0; /* Aggiungi spaziatura top/bottom */
+    display: flex;
+    justify-content: center; /* Centra i link orizzontalmente */
+    gap: 30px; /* Distanza tra i link */
+    flex-wrap: wrap; /* Permette di andare a capo quando necessario */
+    margin-top: 40px; /* Distanza tra il footer e la sezione precedente */
+}
+
+/* Lista dei link nel footer */
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+/* Ogni link del footer */
+footer li {
+    margin: 0;
+}
+
+/* Link del footer */
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Media Queries per dispositivi più grandi (PC) */
+@media (min-width: 1024px) {
+    footer {
+        flex-direction: row; /* Disposizione orizzontale per il footer su PC */
+        justify-content: center; /* Allinea i link al centro */
+    }
+
+    footer ul {
+        flex-direction: row; /* I link sono disposti orizzontalmente */
+    }
+
+    footer a {
+        font-size: 1.25rem; /* Dimensione font standard per desktop */
+    }
+}
+
+/* Media Queries per tablet e schermi più piccoli */
+@media (max-width: 1024px) {
+    footer {
+        flex-direction: row; /* Disposizione orizzontale per tablet */
+        justify-content: center; /* Allineamento dei link al centro */
+        gap: 20px; /* Distanza tra i link */
+    }
+
+    footer ul {
+        flex-direction: row; /* I link sono disposti orizzontalmente anche su tablet */
+    }
+
+    footer a {
+        font-size: 1.125rem; /* Riduci la dimensione del font su tablet */
+    }
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Disposizione verticale per dispositivi mobili */
+        justify-content: center; /* Centra i link */
+        align-items: center; /* Allinea i link al centro */
+        gap: 15px; /* Riduce la distanza tra i link su dispositivi mobili */
+    }
+
+    footer ul {
+        flex-direction: column; /* I link sono disposti verticalmente su dispositivi mobili */
+    }
+
+    footer a {
+        font-size: 1rem; /* Riduci la dimensione del font sui dispositivi mobili */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem;
+        padding: 15px 0; /* Riduci il padding su schermi molto piccoli */
+    }
+
+    footer ul {
+        flex-direction: column; /* I link sono disposti verticalmente */
+    }
+
+    footer a {
+        font-size: 0.9rem; /* Ulteriore riduzione della dimensione del font su cellulari */
+    }
+}
